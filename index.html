@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./CSS/style.css">
+   <title>SongBird</title>
+</head>
+<body>
+   <div class="container">
+      <header class="header">
+         <div class="header__high">
+            <img src="./IMG/birdlogo.svg" alt="logo" class="header__img">
+            <p class="header__score"> Score:</p>
+         </div>
+         <div class="list__container">
+            <ul class="list__main">
+               <li class="list__item">Разминка</li>
+               <li class="list__item">Воробьиные</li>
+               <li class="list__item">Лесные птицы</li>
+               <li class="list__item">Певчие птицы</li>
+               <li class="list__item">Хищные птицы</li>
+               <li class="list__item">Морские птицы</li>
+            </ul>
+         </div>
+      </header>
+
+      
+      <section class="player__section">
+         <div class="player__container">
+            <div class="player__img-box">
+               <img class="player__bird-img" src="./IMG/incognito-bird.jpg" alt="incognito-bird">
+            </div>
+            <div class="player__main">
+               <p class="player__bird-name">******</p>
+               <div class="player__bar-container">
+                  <div class="player__button-box">
+                     <img src="./IMG/play-button.svg" alt="play" class="player__play">
+                     <audio src="./SOUNDS/albatros.mp3" class="player__audio"></audio>
+                  </div>
+                  <div class="player__bar-box">
+                     <div class="player__bar"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="birds__section">
+         <div class="birds__container">
+            <div class="birds__list-box">
+               <ul class="birds__list">
+                  <li class="birds__item">Ворон</li>
+                  <li class="birds__item">Журавль</li>
+                  <li class="birds__item">Ласточка</li>
+                  <li class="birds__item">Козодой</li>
+                  <li class="birds__item">Кукушка</li>
+                  <li class="birds__item">Синица</li>
+               </ul>
+            </div>
+            <div class="birds__description-box">
+               <div class="birds__description">
+                  <img src="./IMG/incognito-bird.jpg" alt="bird" class="birds__description-img">
+                  <p class="birds__undername-p"></p>   
+                  <p class="birds__description-p">Прослушайте аудио и выберите верный вариант ответа.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <div class="button__next-wrap">
+         <div class="button__next">Next Level</div>
+      </div>
+      <footer class="footer">
+         <div class="footer__container">
+            <div class="footer__git"><a href="https://github.com/markuschaaaa">gitHub</a></div>
+            <div class="footer__date">2022</div>
+            <div class="footer__course"><a href="https://rs.school/js/"><img src="./IMG/rs_school_js.svg" alt="logo" class="footer__course-img"></a></div>
+         </div>
+      </footer>
+   </div>
+   <audio src="./SOUNDS/false-button.mp3" class="birds__list-false"></audio>
+   <audio src="./SOUNDS/true-button.mp3" class="birds__list-true"></audio>
+   <script src="./JS/script.js"></script>
+</body>
+</html>

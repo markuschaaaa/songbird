@@ -1,0 +1,298 @@
+@charset "UTF-8";
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+* {
+   font-family: "Oswald", sans-serif;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+   padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+   margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+   min-height: 100vh;
+   scroll-behavior: smooth;
+   text-rendering: optimizeSpeed;
+   line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+   list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+   -webkit-text-decoration-skip: ink;
+   text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+   max-width: 100%;
+   display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+   margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+   font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+   * {
+      -webkit-animation-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      -webkit-animation-iteration-count: 1 !important;
+      animation-iteration-count: 1 !important;
+      -webkit-transition-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+   }
+}
+body{
+   background: #222222FF;
+   display: flex;
+   justify-content: center;
+}
+.container{
+   width: 100%;
+   max-width: 1150px;
+   margin-top: 30px;
+}
+/*HEADER*/
+.header__high{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.header__img{
+   max-width: 240px;
+   width: 100%;
+}
+.header__score{
+   font-size: 22px;
+   color: white;
+}
+.list__container{
+   margin-top: 20px;
+}
+.list__main{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   border-radius: 10px;
+   background: #008966FF;
+}
+.list__item{
+   border-radius: 5px;
+   background: #008966FF;
+   padding: 5px 45px;
+   color: white;
+}
+.list__item.active{
+   background: #00BC8CFF;
+}
+/*PLAYER PLAYER PLAYER PLAYER PLAYER PLAYER*/
+.player__section{
+   display: flex;
+   align-items: center;
+   margin-top: 30px;
+   width: 100%;
+   height: 200px;
+   background-color: #303030FF;
+}
+.player__container{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+}
+.player__img-box{
+   overflow: hidden;
+}
+.player__bird-img{
+   border-radius: 10px;
+   max-width: 200px;
+   width: 100%;
+   border-radius: 5px;
+   height: 100%;
+   max-height: 155px;
+}
+.player__main{
+   height: 100%;
+   width: 100%;
+   margin-left:  50px;
+}
+.player__bird-name{
+   color: #fff;
+   margin-top: -20px;
+   font-size: 36px;
+   font-weight: 400;
+}
+.player__bar-container{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 40px;
+}
+.player__bar-box {
+   width: 100%;
+   max-width: 700px;
+   height: 8px;
+   background: rgb(13, 10, 10);
+   border-radius: 20px;
+}
+.player__bar{
+   width: 100%;
+   max-width: 700px;
+   height: 8px;
+   background: #fff;
+   border-radius: 20px;
+}
+.player__button-box{
+}
+.player__play{
+   width: 100%;
+   max-width: 40px;
+   cursor: pointer;
+}
+/*BIRDS BIRDS BIRDS BIRDS BIRDS BIRDS BIRDS BIRDS*/
+.birds__section{
+   margin-top: 30px;
+}
+.birds__container{
+   padding: 20px;
+   display: flex;
+   justify-content: space-between;
+}
+.birds__list-box{
+   margin-right: 10px;
+   border-radius: 10px;
+   border: 1px solid #555555FF;
+   overflow: hidden;
+   width: 100%;
+   background: #303030FF;
+}
+.birds__item{
+   border: 1px solid #555555FF;
+   padding: 20px;
+   color: white;
+}
+.birds__item.enable{
+   transition: all 1s ease;
+   background: red;
+}
+.birds__item.green {
+   transition: all 1s ease;
+   background: rgb(7, 233, 18);
+}
+.birds__item:hover{
+   transition: all 1s ease;
+   background: #808080FF;
+}
+.birds__description-box{
+   padding: 20px;
+   margin-left: 10px;
+   width: 100%;
+   background: #303030FF;
+}
+.birds__description-img{
+   overflow: hidden;
+   border-radius: 10px;
+   max-width: 200px;
+   width: 100%;
+   height: 100%;
+   max-height: 155px;
+}
+.birds__undername-p{
+   color: white;
+   text-transform: uppercase;
+   padding-top: 20px;
+}
+.birds__description-p{
+   color: white;
+   padding-top: 20px;
+}
+.button__next-wrap{
+   background: #303030FF;
+   border-radius: 5px;
+   border: 2px solid rgb(74, 74, 74);
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   margin: 0 auto;
+   margin: 20px 0px;
+}
+.button__next-wrap:hover{
+   background: rgb(74, 74, 74);
+   cursor: pointer;
+}
+.button__next{
+   color: white;
+   padding: 10px 0px;
+   margin: 0 auto;
+}
+.footer{
+   margin: 0 auto;
+   margin-top: 100px;
+   padding-bottom: 20px;
+}
+.footer__container{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+.footer__git{
+   font-size: 18px;
+}
+.footer__git a{
+   text-decoration: none;
+   color: #fff;
+}
+.footer__date{
+   font-size: 18px;
+   color: #fff;
+}
+.footer__course-img{
+   font-size: 18px;
+   width: 100px;
+}  
